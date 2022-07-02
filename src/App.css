@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-left: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 193px;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header img {
+  max-width: 100px;
+  margin-left: 80px;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1024px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 250px;
+}
+
+.on-off {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.on-off > button {
+  font-family: Montserrat, sans-serif;
+  width: 90px;
+  height: 60px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  background-color: white;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #5c48d3 !important;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.on-off p {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.status {
+  background-color: #d34848;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.status-ok {
+  background-color: green;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+footer span {
+  font-weight: 700;
+}
+
+/* MEDIA Q */
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 30px;
+    margin-right: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    justify-content: space-around;
+  }
+
+  main {
+    flex-direction: column-reverse;
   }
 }
